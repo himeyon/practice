@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 #ruby-gemset=railstutorial_rails_4_0
 
 gem 'rails', '4.0.0'
+gem 'puma'
 
 group :development do
   gem 'sqlite3', '1.3.8'
@@ -10,6 +11,8 @@ group :development do
 end
 
 group :test do
+  gem 'rspec'
+  gem 'rspec-rails'
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
 end
