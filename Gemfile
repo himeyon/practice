@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.0.0'
 gem 'bootstrap-sass', '2.3.2.0'
+gem 'bcrypt-ruby', '3.0.1'
 gem 'puma'
 gem 'protected_attributes'
 gem 'sass-rails', '4.0.0'
@@ -22,9 +23,12 @@ end
 
 group :development do
   gem 'pry-rails'
+  gem 'pry-byebug'
 end
 
 group :test do
+  gem 'pry-rails'
+  gem 'pry-byebug'
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
 end
