@@ -11,13 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131221123332) do
+ActiveRecord::Schema.define(version: 20140102231308) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "addresses", force: true do |t|
+    t.string   "zip_code",      limit: 7
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "address3"
+    t.string   "address_kana1"
+    t.string   "address_kana2"
+    t.string   "address_kana3"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "cities", force: true do |t|
     t.string   "name"
-    t.decimal  "lat",                   precision: 10, scale: 6
-    t.decimal  "lot",                   precision: 10, scale: 6
-    t.string   "contry_code", limit: 2
+    t.decimal  "lat",                    precision: 10, scale: 6
+    t.decimal  "lon",                    precision: 10, scale: 6
+    t.string   "country_code", limit: 2
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -30,6 +45,6 @@ ActiveRecord::Schema.define(version: 20131221123332) do
     t.string   "password_digest"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
 end

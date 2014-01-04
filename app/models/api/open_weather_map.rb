@@ -1,6 +1,6 @@
 require 'net/http'
 
-class Api::Weather
+class Api::OpenWeatherMap
 
 	def get_weather_info(id)
 

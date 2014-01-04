@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  database: himeyon_dev
+  encoding: utf8
+  username: himeyon
+  password: 
+  pool: 5
+  timeout: 5000
+
+test:
+  adapter: postgresql
+  database: himeyon_test
+  encoding: utf8
+  username: himeyon
+  password: 
+  pool: 5
+  timeout: 5000
+
+production:
+  adapter: postgresql
+  database: himeyon_prod
+  encoding: utf8
+  username: himeyon
+  password: 
+  pool: 5
+  timeout: 5000
